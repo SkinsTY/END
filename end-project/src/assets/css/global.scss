@@ -1,0 +1,83 @@
+/* 计算大小，单位：rem */
+@function px2rem($px,$base-font-size: 16px){
+	@return ($px / $base-font-size) * 1rem;
+}
+
+/* 弹性盒子模型 */
+@mixin box{
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-box-orient: horizontal;
+}
+@mixin flex($x:1){
+	flex: $x;
+    -webkit-box-flex: $x;
+    -moz-box-flex: $x;
+}
+@mixin box-pack($p: end) {
+    -moz-box-pack: $p;
+    -webkit-box-pack: $p;
+    display: -moz-box;
+    display: -webkit-box;
+}
+@mixin box-align($p: center) {
+    -moz-box-align: $p;
+    -webkit-box-align: $p;
+    display: -moz-box;
+    display: -webkit-box;
+}
+@mixin box-pack($p: end) {
+    -moz-box-pack: $p;
+    -webkit-box-pack: $p;
+    display: -moz-box;
+    display: -webkit-box;
+}
+/* 圆角 */
+@mixin radius($radius:5px){
+	border-radius: $radius;
+	-webkit-border-raidus: $radius;
+	-moz-border-raidus: $radius;
+	-ms-border-radius: $radius;
+}
+/* 阴影 */
+@mixin shadow($x:0,$y:3px,$z:5px,$c:rgba(0,0,0,0.1)){
+	box-shadow: $x $y $z $c;
+	-webkit-box-shadow: $x $y $z $c;
+	-moz-box-shadow: $x $y $z $c;
+	-ms-box-shadow: $x $y $z $c;
+}
+/* 背景图片 */
+@mixin bgimg($src){
+	background-image: $src;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+/* 位移 */
+@mixin translate($x:0,$y:0){
+	transform: translate($x,$y);
+	-webkit-transform: translate($x,$y);
+	-moz-transform: translate($x,$y);
+	-ms-transform: translate($x,$y);
+}
+/* 缩放 */
+@mixin scale($x:1,$y:1){
+	transform: scale($x,$y);
+	-webkit-transform: scale($x,$y);
+	-moz-transform: scale($x,$y);
+	-ms-transform: scale($x,$y);
+}
+/* 动画 */
+@mixin transition($property:all,$s:0.4s,$effect:ease){
+	transition: $property $s $effect;
+	-webkit-transition: $property $s $effect;
+	-moz-transition: $property $s $effect;
+	-ms-transition: $property $s $effect;
+}
+/* 动画特效 */
+@mixin animition($name: animition,$s:0.4s) {
+	animation: $name $s;
+	-webkit-animation: $name $s;
+	-moz-animation: $name $s;
+	-ms-animation: $name $s;
+}

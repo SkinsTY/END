@@ -1,0 +1,77 @@
+html,body {
+	width: 100%;
+	min-height: 100%;
+	color: #666;
+	-webkit-text-size-adjust: none;
+	background: #f5f5f5;
+	font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	list-style: none;
+	text-decoration: none;
+	tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-ms-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	font-style: normal;
+}
+input,textarea {
+	font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+/* custom */
+a,a:link,a:visited,a:active {
+    color: #a5b0ff;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+h1 {
+	font-size: 1.125rem;
+	line-height: 2rem;
+	position: relative;
+}
+h1:before,
+h1:after {
+	content: "";
+	display: inline-block;
+	width: 30%;
+	height: 1px;
+	background: rgba(0,0,0,0.2);
+	position: absolute;
+	top: 1rem;
+}
+h1:before {
+	left: 1rem;
+}
+h1:after {
+	right: 1rem;
+}
+input,button,select,textarea {
+	outline:none;
+}
+/* 按钮 */
+.btn {
+	font-size: 1rem;
+	line-height: 2.5rem;
+	background: #a5b0ff;
+	display: block;
+}
+/* 禁止点击 */
+.disable {
+	color: #ccc !important;
+	pointer-events: none;
+}
